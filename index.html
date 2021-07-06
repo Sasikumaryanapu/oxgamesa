@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8"/>
+<meta name="sasi" content="oxgame"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>sas game</title>
+
+<style>
+
+*{
+ padding:0px;
+ margin:0px;
+ background-color:black;
+ overflow:hidden;
+}
+
+#d1
+{
+  width:320px;
+  height:300px;
+  border:none;
+ display:flex;
+ flex-direction:row;
+ flex-wrap:wrap;
+ justify-content:center;
+ align-items:flex-end;
+position:relative;
+top:-10px;
+}
+
+input[type="text"]
+{
+  width:80px;
+  height:100px;
+  color:aqua;
+  font-size:70px;
+  font-width:100px;
+  border:none;
+  outline:none;
+  text-align:center;
+}
+
+.d2
+{
+  width:70px;
+ height:70px;
+ text-align:center;
+ border:6px solid pink;
+ border-radius:20px;
+ position:relative;
+ top:10px;
+ left:30px;
+}
+
+#d3
+{
+ width:35px;
+ height:35px;
+ border-radius:50%;
+ border-width:4px;
+ border-style:solid;
+ border-color:pink;
+ position:relative;
+ left:15px;
+ 
+}
+
+#d4
+{
+ width:10px;
+ height:10px;
+ border-radius:50%;
+ border-width:2px;
+ border-style:solid;
+ border-color:pink;
+ position:relative;
+ left:50px;
+}
+
+
+#h
+{
+ font-size:85px;
+ color:white;
+ position:relative;
+ left:130px;
+ top:-140px;
+}
+
+h2
+{
+ color:pink;
+ font-size:50px;
+ position:relative;
+ top:10px;
+ left:10px;
+}
+
+mark
+{
+ color:pink;
+}
+
+article
+{
+ color:red;
+ font-size:16px;
+ position:relative;
+ top:0px;
+ 
+}
+
+#i1,#i4,#i7,#i2,#i5,#i8
+{
+  border-right:2px solid pink;
+}
+
+#i1,#i2,#i3
+{
+  border-bottom:2px solid pink;
+}
+#i4,#i5,#i6
+{
+  border-bottom:2px solid pink;
+}
+span{color:lime;font-size:10px;}
+</style>
+</head>
+<body>
+<h4>sasiyanapu</h4>
+<div id="d1">
+
+<input type="text" id="i1"/>
+<input type="text" id="i2" />
+<input type="text" id="i3"  />
+<br>
+<input type="text" id="i4" />
+<input type="text" id="i5" />
+<input type="text" id="i6" />
+<br>
+<input type="text" id="i7" />
+<input type="text" id="i8" />
+<input type="text" id="i9" />
+
+</div>
+
+<article>
+ you & your friend can play this <mark>AWESOME</mark> <b>game<b><br>
+ choose any <mark> 2 characters </mark> of ur choice.<br>
+ if the same character repeats<strong> 3 times </strong>
+ in <q> any direction </q><br>
+ <mark><b>your followers will be increase</b></mark><br>
+ if not then ur followers will <mark>decrease</mark>
+ press <mark>followers</mark> to view ur score<br>
+<span>Developed By SasiKumar Yanapu</span>
+</article>
+
+<div class="d2">
+<div id="d4"> </div>
+ <div id="d3">
+ </div>
+</div>
+<h2 id="la">followers</h2>
+<h3 id="h">0</h3>
+<div class="d5">
+<div id="d6"> </div>
+ <div id="d7">
+ </div>
+</div>
+<script>
+
+var las=document.getElementById("la");
+var count=0;
+las.addEventListener("click",start);
+function start()
+{
+
+var s=document.getElementById("i1").value;
+var t=document.getElementById("i2").value;
+var u=document.getElementById("i3").value;
+
+var v=document.getElementById("i4").value;
+var w=document.getElementById("i5").value;
+var x=document.getElementById("i6").value;
+
+var y=document.getElementById("i7").value;
+var z=document.getElementById("i8").value;
+var a=document.getElementById("i9").value;
+
+var b=document.getElementById("h");
+
+if(s==" " && t==" " && u==" ")
+{
+  alert("please fill the block");
+}
+else if(v==" " && w==" " && x==" ")
+{
+  alert("please fill the block");
+}
+else if(y==" " && z==" " && a==" ")
+{
+  alert("please fill the block");
+}
+else if(s==t && t==u)
+{
+count++;
+b.innerHTML=count;
+}
+else if(v==w && w==x)
+{
+count++;
+b.innerHTML=count;
+
+}
+else if(y==z && z==a)
+{
+count++;
+b.innerHTML=count;
+
+}
+else if(s==w && w==a)
+{
+count++;
+b.innerHTML=count;
+
+}
+else if(u==w && w==y)
+{
+count++;
+b.innerHTML=count;
+
+}
+else if(s==v && v==y)
+{
+  count++;
+b.innerHTML=count;
+
+}
+else if(t==w && w==z)
+{
+count++;
+b.innerHTML=count;
+
+}
+else if(u==x && x==a)
+{
+ count++;
+b.innerHTML=count;
+
+}
+else
+{
+  count--;
+  b.innerHTML=count;
+}
+
+
+var s=document.getElementById("i1");
+
+var t=document.getElementById("i2");
+var u=document.getElementById("i3");
+
+var v=document.getElementById("i4");
+var w=document.getElementById("i5");
+var x=document.getElementById("i6");
+
+var y=document.getElementById("i7");
+var z=document.getElementById("i8");
+var a=document.getElementById("i9");
+
+  s.value=" ";
+  t.value=" ";
+  u.value=" ";
+  v.value=" ";
+  w.value=" ";
+  x.value=" ";
+  y.value=" ";
+  z.value=" ";
+  a.value=" ";
+}
+
+
+</script>
+</body>
+</html>
